@@ -23,7 +23,8 @@ class Admin extends Model
         return $this->belongsTo(User::class);
     }
     public function departments()
-{
-    return $this->belongsToMany(Department::class, 'admin_department');
-}
+    {
+        return $this->belongsToMany(Department::class, 'admin_department');
+    }
+
 }

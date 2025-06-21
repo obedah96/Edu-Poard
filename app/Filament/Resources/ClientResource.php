@@ -101,6 +101,27 @@ class ClientResource extends Resource
                     ->label(__('client.fields.user'))
                     ->searchable()
                     ->sortable(),
+                    Tables\Columns\TextColumn::make('service_type')
+    ->label(__('client.fields.service_type'))
+    ->formatStateUsing(function ($state) {
+        return match ($state) {
+            'Software' => __('client.service_types.software'),
+            'Design' => __('client.service_types.design'),
+            'Marketing' => __('client.service_types.marketing'),
+            'Business' => __('client.service_types.business'),
+            default => $state,
+        };
+    })
+    ->badge() // اختياري: لإظهارها كبادج
+    ->color(fn ($state) => match ($state) {
+        'Software' => 'info',
+        'Design' => 'success',
+        'Marketing' => 'warning',
+        'Business' => 'primary',
+        default => 'gray',
+    })
+    ->sortable()
+    ->toggleable(),
 
                 TextColumn::make('company_name')
                     ->label(__('client.fields.company_name'))

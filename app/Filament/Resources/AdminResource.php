@@ -38,6 +38,9 @@ class AdminResource extends Resource
                 ->relationship('user', 'name')
                 ->searchable()
                 ->required(),
+                Forms\Components\Select::make('departments')
+                ->label(__('admin.fields.department'))
+                ->relationship('departments', 'service_type'),
 
             Forms\Components\FileUpload::make('avatar')
                 ->label(__('admin.fields.avatar'))
@@ -63,10 +66,11 @@ class AdminResource extends Resource
                 ->searchable()
                 ->sortable(),
 
-            Tables\Columns\TextColumn::make('departments.name')
-                ->label(__('admin.fields.department'))
-                ->limit(2)
-                ->toggleable(),
+            Tables\Columns\TextColumn::make('departments')
+            ->label(__('admin.fields.department'))
+            ->getStateUsing(fn ($record) => $record->departments->pluck('service_type')->join(', '))
+            ->limit(20)
+            ->toggleable(),
 
             Tables\Columns\ImageColumn::make('avatar')
                 ->label(__('admin.fields.avatar')),
