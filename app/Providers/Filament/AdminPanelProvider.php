@@ -19,6 +19,9 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Navigation\MenuItem;
 use App\Http\Middleware\SetLocale;
+   use Filament\View\PanelsRenderHook;
+   use Illuminate\Support\Facades\View;
+   use Illuminate\Support\Facades\Blade;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -70,6 +73,13 @@ class AdminPanelProvider extends PanelProvider
                      ->icon('heroicon-o-globe-alt')
                     ->url(fn() => route('language.switch', [app()->getLocale() === 'en' ? 'ar' : 'en']))
                      ->openUrlInNewTab(false),
-             ]);
+             ])
+             ->renderHook(
+                PanelsRenderHook::SIDEBAR_NAV_START,
+                // هذه هي الطريقة الصحيحة: استخدام Blade::render() لعرض المحتوى كـ HTML
+                fn (): string => Blade::render(view('filament.admin.partials.sidebar-header')->render()),
+            );
+
+
     }
 }

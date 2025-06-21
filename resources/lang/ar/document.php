@@ -6,7 +6,7 @@ return [
     ],
     'fields' => [
         'client' => 'العميل',
-        'name' => 'الاسم',
+        'name' => 'اسم الوثيقة',
         'document_date' => 'تاريخ الوثيقة',
         'version' => 'الإصدار',
         'type' => 'النوع',

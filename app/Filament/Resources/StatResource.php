@@ -26,7 +26,7 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 class StatResource extends Resource
 {
     protected static ?string $model = Stat::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-chart-pie';
 
     public static function getLabel(): ?string
     {

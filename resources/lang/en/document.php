@@ -6,7 +6,7 @@ return [
     ],
     'fields' => [
         'client' => 'Client',
-        'name' => 'Name',
+        'name' => 'Document Name',
         'document_date' => 'Document Date',
         'version' => 'Version',
         'type' => 'Type',

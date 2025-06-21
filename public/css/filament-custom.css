@@ -1,0 +1,41 @@
+/* public/css/filament-custom.css */
+
+.fi-user-avatar {
+    /* override the default responsive image styles */
+    height: 6rem !important;        /* تحديد ارتفاع ثابت ومربع */
+    width: 6rem !important;         /* تحديد عرض ثابت ومربع */
+    max-width: 6rem !important;     /* التأكد من عدم تجاوز هذا الحجم */
+    min-width: 6rem !important;     /* التأكد من عدم تقليصها عن هذا الحجم */
+
+    /* Forcing roundness */
+    border-radius: 9999px !important; /* لضمان الدائرية الكاملة */
+
+    /* Image fitting and positioning */
+    object-fit: cover !important;     /* لضمان تغطية الصورة للمساحة دون تشويه */
+    object-position: center !important; /* لتوسيط الصورة */
+
+    /* Flexbox behavior */
+    flex-shrink: 0 !important;        /* لمنع تقليصها بواسطة Flexbox */
+    flex-grow: 0 !important;          /* لمنع تمددها بواسطة Flexbox */
+
+    /* Other styles */
+    display: block !important;        /* للتأكد من أنها تتبع خصائص الكتلة بشكل صحيح */
+    margin: 0 auto !important;        /* لتوسيط الصورة داخل أي حاوية */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06) !important; /* ظل */
+    outline: 2px solid white !important; /* حلقة بيضاء (إذا كنت تريدها) */
+}
+
+/* الأنماط البديلة إذا لم تكن هناك صورة (div) */
+.fi-user-avatar.flex.items-center.justify-center {
+    height: 6rem !important;
+    width: 6rem !important;
+    max-width: 6rem !important;
+    min-width: 6rem !important;
+    border-radius: 9999px !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    font-size: 3rem !important;
+    line-height: 1 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06) !important;
+    outline: 2px solid white !important;
+}

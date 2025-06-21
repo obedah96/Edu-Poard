@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\Model;
 class AdminResource extends Resource
 {
     protected static ?string $model = Admin::class;
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-users';
 
      public static function getLabel(): ?string
     {
