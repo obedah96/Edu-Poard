@@ -32,7 +32,9 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->login()
-            ->brandName('Edu Poard')
+            ->brandName('MAVE')
+            ->brandLogo( asset('storage/logo.jpeg'))
+            ->brandLogoHeight('6rem')
             ->colors([
                 'primary'   => '#60A5FA',  // أزرق فاتح
                 'secondary' => '#E5E7EB',  // رمادي فاتح (مثال)
