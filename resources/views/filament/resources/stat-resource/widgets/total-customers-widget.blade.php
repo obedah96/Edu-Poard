@@ -1,8 +1,8 @@
 <x-filament-widgets::widget column-span="full">
     <x-filament::section class="space-y-6">
-        <div class="flex flex-nowrap space-x-4 w-full">
+        <div class="flex flex-wrap gap-4">
             {{-- إجمالي العملاء --}}
-            <div class="flex-1 p-4 bg-white rounded-lg shadow flex items-center space-x-4">
+            <div class="flex-1 min-w-[250px] p-4 bg-white rounded-lg shadow flex items-center space-x-4">
                 <x-heroicon-o-user-group class="w-8 h-8 text-primary-600" />
                 <div>
                     <div class="text-sm font-medium text-gray-600">Total Clients</div>
@@ -13,7 +13,7 @@
             </div>
 
             {{-- أعضاء الفريق --}}
-            <div class="flex-1 p-4 bg-white rounded-lg shadow flex items-center space-x-4">
+            <div class="flex-1 min-w-[250px] p-4 bg-white rounded-lg shadow flex items-center space-x-4">
                 <x-heroicon-o-user class="w-8 h-8 text-green-600" />
                 <div>
                     <div class="text-sm font-medium text-gray-600">Team Members</div>
@@ -24,7 +24,7 @@
             </div>
 
             {{-- إجمالي الوثائق --}}
-            <div class="flex-1 p-4 bg-white rounded-lg shadow flex items-center space-x-4">
+            <div class="flex-1 min-w-[250px] p-4 bg-white rounded-lg shadow flex items-center space-x-4">
                 <x-heroicon-o-document-text class="w-8 h-8 text-indigo-600" />
                 <div>
                     <div class="text-sm font-medium text-gray-600">Total Documents</div>
@@ -35,7 +35,7 @@
             </div>
 
             {{-- التحميلات هذا الشهر --}}
-            <div class="flex-1 p-4 bg-white rounded-lg shadow flex items-center space-x-4">
+            <div class="flex-1 min-w-[250px] p-4 bg-white rounded-lg shadow flex items-center space-x-4">
                 <x-heroicon-o-arrow-up-on-square-stack class="w-8 h-8 text-yellow-600" />
                 <div>
                     <div class="text-sm font-medium text-gray-600">Uploads This Month</div>

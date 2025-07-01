@@ -33,7 +33,7 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->brandName('MAVE')
-            ->brandLogo( asset('storage/logo.jpeg'))
+            ->brandLogo( asset('storage/wordmarklogocolored.svg'))
             ->brandLogoHeight('6rem')
             ->colors([
                 'primary'   => '#60A5FA',  // أزرق فاتح
